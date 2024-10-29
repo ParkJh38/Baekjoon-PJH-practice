@@ -1,6 +1,12 @@
-def solution(N):
-    return sum(int(each) for each in str(N))
-    #문자열로 변환된 N의 각 문자를 순차적으로 읽어서 정수로 변환한 후 리스트로 생성
+def solution(n):
+    answer = 0
+    str_n = str(n)
+    for i in range(len(str_n)):  #인덱스 사용
+        answer += int(str_n[i])
+    return answer
 
-#print(solution(123))
-#print(solution(987)) 
+# def solution(n):
+#     answer = 0
+#     for i in str(n):   #인덱스 사용하지 않고 각 자릿수 문자열로 파악
+#         answer += int(i)
+#     return answer
