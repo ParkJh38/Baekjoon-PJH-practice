@@ -1,9 +1,6 @@
 def solution(x, n):
     answer = []
-    num = 0
-    for i in range(n):
-        num += x
-        answer.append(num)
-        
-    
+    for i in range(0,n):
+        answer.append((x*i+x))
+    print(answer)
     return answer
