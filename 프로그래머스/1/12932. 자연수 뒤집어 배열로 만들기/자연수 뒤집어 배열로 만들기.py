@@ -1,9 +1,12 @@
 def solution(n):
     answer = []
-    for each in str(n):
-        answer.append(each)
+    for i in str(n):
+        answer.append(i)
     answer.reverse()
-    
-    int_answer = list(map(int, answer))
-    
-    return int_answer
+    for i in range(len(answer)):
+        answer[i] = int(answer[i])
+    return answer
+
+
+# def solution(n):  # 리스트 내포 방식
+#     return [int(i) for i in str(n)[::-1]]
