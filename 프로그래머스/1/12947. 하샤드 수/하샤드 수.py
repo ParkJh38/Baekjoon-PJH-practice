@@ -1,11 +1,8 @@
 def solution(x):
-    digit_sum = sum(int(digit) for digit in str(x))
-    
-    if (x % digit_sum) == 0:
+    add = 0
+    for i in str(x):
+        add += int(i)
+    if x % add == 0:
         return True
     else:
         return False
-    
-
-
-
