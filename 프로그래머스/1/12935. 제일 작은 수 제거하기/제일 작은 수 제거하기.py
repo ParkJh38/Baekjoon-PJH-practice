@@ -1,8 +1,10 @@
 def solution(arr):
     answer = []
-    min_value = min(arr)
-    arr.remove(min_value)
-    if len(arr) == 0:
+    if len(arr) == 1:
         return [-1]
     else:
-        return arr
+        k = min(arr)
+        for i in range(len(arr)):
+            if arr[i] != k:
+                answer.append(arr[i])
+    return answer
